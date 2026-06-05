@@ -9,102 +9,187 @@
     * {
       box-sizing: border-box;
     }
-    
 
     body {
-  margin: 0;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top, rgba(255, 122, 0, 0.18), transparent 35%),
-    linear-gradient(135deg, #050505, #111111, #050505);
-  color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
-  display: flex;
-  align-items: center;      /* ⬅️ center vertically */
-  justify-content: center;  /* ⬅️ center horizontally */
-  text-align: center;
-}
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(255, 122, 0, 0.18), transparent 35%),
+        linear-gradient(135deg, #050505, #111111, #050505);
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
     .container {
-  max-width: 700px;
-  width: 100%;
-}
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
     .logo {
-  width: 600px;
-  max-width: 95%;
-  margin-bottom: 20px;
-}
+      width: 600px;
+      max-width: 95%;
+      margin-bottom: 20px;
+    }
 
-.motto {
-  margin-bottom: 8px;
-}
+    .motto {
+      margin-bottom: 10px;
+      color: rgba(255,255,255,0.75);
+    }
 
-.eyebrow {
-  color: #ff7a00;   /* orange */
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  font-size: 0.9rem;
-  margin-top: 0;
-}
+    .eyebrow {
+      color: #ff7a00;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
 
-    p {
-      margin: 18px auto 0;
-      max-width: 620px;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      line-height: 1.6;
-      font-weight: 500;
+    .intro {
+      max-width: 750px;
+      margin: 0 auto 50px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      transition: 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255,122,0,0.4);
+    }
+
+    .product-logo {
+      width: 120px;
+      margin-bottom: 12px;
+    }
+
+    .product-card h2 {
+      color: #ff7a00;
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .product-subtitle {
+      margin-top: 8px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .product-description {
+      margin-top: 16px;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.7;
     }
 
     .footer {
-      margin-top: 34px;
-      color: rgba(255, 255, 255, 0.38);
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
+      margin-top: 60px;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.9rem;
+      line-height: 1.8;
     }
 
     @media (max-width: 520px) {
       .logo {
         width: 320px;
       }
-  
-    }
-    .mycom-button {
-  display: inline-block;
-  margin-top: 28px;
-  background: #ff7a00;
-  color: white;
-  text-decoration: none;
-  padding: 16px 34px;
-  border-radius: 14px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  transition: 0.2s ease;
-  box-shadow: 0 0 24px rgba(255, 122, 0, 0.35);
-}
 
-.mycom-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 34px rgba(255, 122, 0, 0.5);
-}
+      .product-card {
+        padding: 22px;
+      }
+    }
   </style>
 </head>
 
 <body>
+
   <main class="container">
-    <img src="as-logo-white.png" alt="Aveah Systems logo" class="logo" />
+
+    <img src="as-logo-white.png" alt="Aveah Systems Logo" class="logo" />
 
     <p class="motto">
       Bringing structure, clarity, and control to real-world operations.
     </p>
 
-    <div class="eyebrow">COMING SOON</div>
-    <a href="mycom://home" class="mycom-button"> MYCOM ROOFING</a>
+    <div class="eyebrow">AVEAH SYSTEMS</div>
 
+    <p class="intro">
+      Aveah Systems develops connected software for roofing companies —
+      from inspection and estimating through production, documentation,
+      and closeout.
+    </p>
+
+    <section class="products">
+
+      <div class="product-card">
+
+        <img
+          src="aveahi-logo.png"
+          alt="AVEAHi Logo"
+          class="product-logo"
+        />
+
+        <h2>AVEAHi</h2>
+
+        <div class="product-subtitle">
+          Inspection + Estimating Intelligence
+        </div>
+
+        <p class="product-description">
+          AVEAHi helps roofing companies inspect properties, trace roof sections,
+          generate estimates, recommend assemblies and warranties, evaluate
+          weather conditions, and create professional proposals.
+        </p>
+
+      </div>
+
+      <div class="product-card">
+
+        <img
+          src="as-logo-white.png"
+          alt="MYCOM Logo"
+          class="product-logo"
+        />
+
+        <h2>MYCOM</h2>
+
+        <div class="product-subtitle">
+          Operations + Production Management
+        </div>
+
+        <p class="product-description">
+          MYCOM helps roofing companies manage work after a proposal is approved,
+          including tickets, crew assignments, time tracking, documentation,
+          production visibility, job progress, and closeouts.
+        </p>
+
+      </div>
+
+    </section>
+
+    <div class="footer">
+      <strong>AVEAHi</strong> → Inspection, Estimating & Proposal Intelligence
+      <br />
+      <strong>MYCOM</strong> → Operations, Production & Closeout Management
+    </div>
 
   </main>
+
 </body>
 </html>
