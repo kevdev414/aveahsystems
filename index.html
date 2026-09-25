@@ -3,193 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aveah Systems</title>
-
+  <meta name="theme-color" content="#050505" />
+  <meta name="description" content="Aveah Systems builds connected software for commercial roofing teams: AVEAHi, MYCOM, and TimeBridge." />
+  <title>Aveah Systems | Roofing Software</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(circle at top, rgba(255, 122, 0, 0.18), transparent 35%),
-        linear-gradient(135deg, #050505, #111111, #050505);
-      color: #ffffff;
+      background: radial-gradient(circle at top, rgba(255, 122, 0, 0.18), transparent 35%), linear-gradient(135deg, #050505, #111111, #050505);
+      color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       padding: 60px 20px;
       text-align: center;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .logo {
-      width: 600px;
-      max-width: 95%;
-      margin-bottom: 20px;
-    }
-
-    .motto {
-      margin-bottom: 10px;
-      color: rgba(255,255,255,0.75);
-    }
-
-    .eyebrow {
-      color: #ff7a00;
-      font-weight: 800;
-      letter-spacing: 0.22em;
-      font-size: 0.9rem;
-      margin-bottom: 14px;
-    }
-
-    .intro {
-      max-width: 750px;
-      margin: 0 auto 50px;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.7;
-      font-size: 1.1rem;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-
-    .product-card {
-      padding: 30px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      transition: 0.2s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255,122,0,0.4);
-    }
-
-    .product-logo {
-      width: 120px;
-      margin-bottom: 12px;
-    }
-
-    .product-card h2 {
-      color: #ff7a00;
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .product-subtitle {
-      margin-top: 8px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .product-description {
-      margin-top: 16px;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.7;
-    }
-
-    .footer {
-      margin-top: 60px;
-      color: rgba(255,255,255,0.45);
-      font-size: 0.9rem;
-      line-height: 1.8;
-    }
-
-    @media (max-width: 520px) {
-      .logo {
-        width: 320px;
-      }
-
-      .product-card {
-        padding: 22px;
-      }
-    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .logo { width: 600px; max-width: 95%; margin-bottom: 20px; }
+    .motto { margin-bottom: 10px; color: rgba(255,255,255,.75); }
+    .eyebrow { color: #ff7a00; font-weight: 800; letter-spacing: .22em; font-size: .9rem; margin-bottom: 14px; }
+    .intro { max-width: 750px; margin: 0 auto 50px; color: rgba(255,255,255,.72); line-height: 1.7; font-size: 1.1rem; }
+    .products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 40px; text-align: left; }
+    .product-card { padding: 30px; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(12px); transition: transform .2s ease, border-color .2s ease; }
+    .product-card:hover { transform: translateY(-3px); border-color: rgba(255,122,0,.4); }
+    .product-logo { display: block; width: 120px; height: 90px; object-fit: contain; object-position: left center; margin-bottom: 12px; }
+    .product-card h2 { color: #ff7a00; margin: 0; font-size: 2rem; }
+    .product-subtitle { margin-top: 8px; font-weight: 700; color: rgba(255,255,255,.9); }
+    .product-description { margin: 16px 0 0; color: rgba(255,255,255,.72); line-height: 1.7; }
+    .footer { margin-top: 60px; color: rgba(255,255,255,.55); font-size: .9rem; line-height: 1.8; }
+    @media (max-width: 950px) { .products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 650px) { .logo { width: 320px; } .products { grid-template-columns: 1fr; } .product-card { padding: 22px; } }
+    @media (prefers-reduced-motion: reduce) { .product-card { transition: none; } }
   </style>
 </head>
-
 <body>
-
   <main class="container">
-
-    <img src="as-logo-white.png" alt="Aveah Systems Logo" class="logo" />
-
-    <p class="motto">
-      Bringing structure, clarity, and control to real-world operations.
-    </p>
-
+    <img src="as-logo-white.png" alt="Aveah Systems" class="logo" />
+    <p class="motto">Bringing structure, clarity, and control to real-world operations.</p>
     <div class="eyebrow">AVEAH SYSTEMS</div>
+    <p class="intro">Aveah Systems develops connected software for commercial roofing teams — from inspection and estimating through field operations, time tracking, and closeout.</p>
 
-    <p class="intro">
-      Aveah Systems develops connected software for roofing companies —
-      from inspection and estimating through production, documentation,
-      and closeout.
-    </p>
-
-    <section class="products">
-
-      <div class="product-card">
-
-        <img
-          src="aveahi_logo.png"
-          alt="AVEAHi Logo"
-          class="product-logo"
-        />
-
+    <section class="products" aria-label="Aveah Systems products">
+      <article class="product-card">
+        <img src="aveahi_logo.png" alt="AVEAHi logo" class="product-logo" />
         <h2>AVEAHi</h2>
+        <div class="product-subtitle">Inspection + Estimating Intelligence</div>
+        <p class="product-description">AVEAHi helps roofing companies inspect properties, trace roof sections, build estimates, evaluate assemblies and warranties, account for weather, and prepare professional proposals.</p>
+      </article>
 
-        <div class="product-subtitle">
-          Inspection + Estimating Intelligence
-        </div>
-
-        <p class="product-description">
-          AVEAHi helps roofing companies inspect properties, trace roof sections,
-          generate estimates, recommend assemblies and warranties, evaluate
-          weather conditions, and create professional proposals.
-        </p>
-
-      </div>
-
-      <div class="product-card">
-
-        <img
-          src="mycomlogoorange.png"
-          alt="MYCOM Logo"
-          class="product-logo"
-        />
-
+      <article class="product-card">
+        <img src="mycomlogoorange.png" alt="MYCOM logo" class="product-logo" />
         <h2>MYCOM</h2>
+        <div class="product-subtitle">Operations + Production Management</div>
+        <p class="product-description">MYCOM connects approved work to the field with tickets, crew assignments, documentation, production visibility, job progress, and closeouts.</p>
+      </article>
 
-        <div class="product-subtitle">
-          Operations + Production Management
-        </div>
-
-        <p class="product-description">
-          MYCOM helps roofing companies manage work after a proposal is approved,
-          including tickets, crew assignments, time tracking, documentation,
-          production visibility, job progress, and closeouts.
-        </p>
-
-      </div>
-
+      <article class="product-card">
+        <img src="time-bridge.jpg" alt="TimeBridge logo" class="product-logo" />
+        <h2>TimeBridge</h2>
+        <div class="product-subtitle">Crew Time + Approval Workflow</div>
+        <p class="product-description">TimeBridge gives crews a straightforward way to record work hours and gives leads and office teams a clear path to review, approve, audit, and export time records for payroll.</p>
+      </article>
     </section>
 
-    <div class="footer">
-      <strong>AVEAHi</strong> → Inspection, Estimating & Proposal Intelligence
-      <br />
-      <strong>MYCOM</strong> → Operations, Production & Closeout Management
-    </div>
-
+    <footer class="footer">
+      <strong>AVEAHi</strong> → Inspection, Estimating &amp; Proposals<br />
+      <strong>MYCOM</strong> → Operations, Production &amp; Closeout<br />
+      <strong>TimeBridge</strong> → Time Tracking, Approvals &amp; Payroll Exports
+    </footer>
   </main>
-
 </body>
 </html>
